@@ -1,10 +1,10 @@
 {
-  "name": "bacon-test",
+  "name": "itemize",
   "version": "1.0.0",
   "description": "test cli",
   "main": "index.js",
   "scripts": {
-    "start": "npm i -g && itemize",
+    "start": "npm uninstall -g && sudo npm i -g && itemize",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {

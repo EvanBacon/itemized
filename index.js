@@ -9,8 +9,9 @@ var merge = require('deepmerge');
 
 program
   .version('0.0.2')
-  .option('-n, --name <fileName>', 'The name of the resource file')
+  .option('-f, --file <file>', 'The name of the resource file')
   .option('-p, --path <path>', 'The path to read')
+  .option('-d, --destroy', 'Should overwrite the current file')
   .parse(process.argv);
 co(function*() {
   const writeFile = (files, name) => {
@@ -25,7 +26,7 @@ co(function*() {
 
       /// Write to ./Images.js
 
-      if (fs.existsSync(name)) {
+      if (fs.existsSync(name) && !program.destroy) {
         console.warn(`This will overwrite ${name}`);
 
         const shouldContinue = yield prompt(`continue? (y/n)`) || 'y';
@@ -54,7 +55,7 @@ co(function*() {
   }
 
   let path = program.path;
-  let name = program.fileName;
+  let name = program.file;
   if (!path) {
     path = yield prompt(`path: (${defaultPath}) `) || defaultPath;
     if (!path || path == '') path = defaultPath;
@@ -89,10 +90,13 @@ co(function*() {
     let objs = files.map(val => {
       var settings = {};
       let components = val.split('/');
+      if (components.length > 1) {
+        components.shift();
+      }
       const key = components.pop();
       // const keyWithoutExtension = key.substr(0, key.lastIndexOf('.'))
       components.push(key);
-      assign(settings, components, `require(\`./${val}\`)`);
+      assign(settings, components, `require(\"./${val}\")`);
       assets = merge(assets, settings);
       return settings;
     });
