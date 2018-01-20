@@ -1,17 +1,42 @@
 {
   "name": "itemize",
-  "version": "1.0.0",
-  "description": "test cli",
+  "version": "0.0.0",
+  "description":
+    "cli for itemizing the contents of a folder as static resources",
   "main": "index.js",
+  "preferGlobal": true,
+  "keywords": [
+    "react",
+    "native",
+    "expo",
+    "exponent",
+    "cli",
+    "itemize",
+    "index",
+    "static",
+    "resource",
+    "asset",
+    "bundle",
+    "metro",
+    "utility",
+    "react-native"
+  ],
   "scripts": {
     "start": "npm uninstall -g && sudo npm i -g && itemize",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanbacon/itemize.git"
+  },
   "bin": {
     "itemize": "./index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Evan Bacon <bacon@expo.io> (https://expo.io/)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.9.1"
+  },
   "dependencies": {
     "chalk": "^1.1.3",
     "co": "^4.6.0",

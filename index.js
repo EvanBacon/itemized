@@ -96,7 +96,7 @@ co(function*() {
       const key = components.pop();
       // const keyWithoutExtension = key.substr(0, key.lastIndexOf('.'))
       components.push(key);
-      assign(settings, components, `require(\"./${val}\")`);
+      assign(settings, components, `require(\`./${val}\`)`);
       assets = merge(assets, settings);
       return settings;
     });
