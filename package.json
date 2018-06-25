@@ -4,6 +4,7 @@
   "description": "cli for itemizing the contents of a folder as static resources",
   "main": "index.js",
   "preferGlobal": true,
+  "homepage": "https://github.com/evanbacon/itemized#readme",
   "keywords": [
     "react",
     "native",
@@ -23,6 +24,9 @@
     "utility",
     "react-native"
   ],
+  "bugs": {
+    "url": "https://github.com/evanbacon/itemized/issues"
+  },
   "scripts": {
     "start": "npm uninstall -g && sudo npm i -g && itemized",
     "test": "echo \"Error: no test specified\" && exit 1"
