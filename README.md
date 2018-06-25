@@ -9,6 +9,10 @@ This CLI is used to create an itemized list of all your node assets. I created `
 
 Run `npm install -g itemized` to install `itemized` globally.
 
+## Usage
+
+Run `itemized` in the root of your projects folder, or where ever you want the assets relative path to be.
+
 ## Commands
 
 View the list of commands using `itemized --help`:
