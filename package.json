@@ -1,8 +1,7 @@
 {
-  "name": "itemize",
+  "name": "itemized",
   "version": "0.0.0",
-  "description":
-    "cli for itemizing the contents of a folder as static resources",
+  "description": "cli for itemizing the contents of a folder as static resources",
   "main": "index.js",
   "preferGlobal": true,
   "keywords": [
@@ -12,7 +11,10 @@
     "exponent",
     "cli",
     "itemize",
+    "itemized",
     "index",
+    "catalogue",
+    "catalog",
     "static",
     "resource",
     "asset",
@@ -22,15 +24,15 @@
     "react-native"
   ],
   "scripts": {
-    "start": "npm uninstall -g && sudo npm i -g && itemize",
+    "start": "npm uninstall -g && sudo npm i -g && itemized",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evanbacon/itemize.git"
+    "url": "git+https://github.com/evanbacon/itemized.git"
   },
   "bin": {
-    "itemize": "./index.js"
+    "itemized": "./index.js"
   },
   "author": "Evan Bacon <bacon@expo.io> (https://expo.io/)",
   "license": "MIT",
